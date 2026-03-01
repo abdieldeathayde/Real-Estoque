@@ -16,12 +16,17 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
+<<<<<<< HEAD
+=======
+        // ✅ AGORA salvamos a resposta
+>>>>>>> 0dc24ae (hash de senha)
         const response = await fetch("http://localhost:8080/auth/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+<<<<<<< HEAD
                 username,
                 password,
                 role
@@ -34,12 +39,37 @@ form.addEventListener("submit", async (e) => {
             form.reset();
         } else {
             mensagem.innerText = "Erro ao cadastrar usuário";
+=======
+                username: username,
+                password: password,
+                role: role
+            })
+        });
+
+        // ✅ tenta ler JSON somente se existir conteúdo
+        let data = null;
+        const text = await response.text();
+        if (text) {
+            data = JSON.parse(text);
+        }
+
+        if (response.ok) {
+            mensagem.innerText = data?.message || "Usuário cadastrado com sucesso!";
+            mensagem.style.color = "green";
+            form.reset();
+        } else {
+            mensagem.innerText = data?.message || "Erro ao cadastrar usuário";
+>>>>>>> 0dc24ae (hash de senha)
             mensagem.style.color = "red";
         }
 
     } catch (error) {
         mensagem.innerText = "Erro na conexão com servidor";
         mensagem.style.color = "red";
+<<<<<<< HEAD
         console.error(error);
+=======
+        console.error("Erro:", error);
+>>>>>>> 0dc24ae (hash de senha)
     }
 });

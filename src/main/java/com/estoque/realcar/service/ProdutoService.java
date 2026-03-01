@@ -1,7 +1,12 @@
 package com.estoque.realcar.service;
 
+<<<<<<< HEAD
 import com.estoque.realcar.dto.ProdutoRequestDTO;
 import com.estoque.realcar.dto.ProdutoResponseDTO;
+=======
+import com.estoque.realcar.dto.request.ProdutoRequestDTO;
+import com.estoque.realcar.dto.response.ProdutoResponseDTO;
+>>>>>>> 0dc24ae (hash de senha)
 import com.estoque.realcar.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

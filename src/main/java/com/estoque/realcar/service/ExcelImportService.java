@@ -1,5 +1,6 @@
 package com.estoque.realcar.service;
 
+<<<<<<< HEAD
 import com.estoque.realcar.dto.ProdutoRequestDTO;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -7,13 +8,23 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+=======
+//import org.apache.poi.ss.usermodel.Cell;
+//import org.apache.poi.ss.usermodel.CellType;
+//import org.apache.poi.ss.usermodel.Row;
+//import org.apache.poi.ss.usermodel.Sheet;
+//import org.apache.poi.ss.usermodel.Workbook;
+>>>>>>> 0dc24ae (hash de senha)
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
+=======
+>>>>>>> 0dc24ae (hash de senha)
 
 @Service
 public class ExcelImportService {
@@ -27,11 +38,16 @@ public class ExcelImportService {
 
     /**
      * Importa produtos de um arquivo Excel
+<<<<<<< HEAD
      * 
+=======
+     *
+>>>>>>> 0dc24ae (hash de senha)
      * @param file arquivo Excel com os produtos
      * @return lista de produtos importados
      * @throws IOException se houver erro ao ler o arquivo
      */
+<<<<<<< HEAD
     public List<ProdutoRequestDTO> importarDePlanilha(MultipartFile file) throws IOException {
         if (file.isEmpty()) {
             throw new IllegalArgumentException("Arquivo vazio");
@@ -67,10 +83,48 @@ public class ExcelImportService {
     /**
      * Importa produtos e os salva no banco de dados
      * 
+=======
+//    public List<ProdutoRequestDTO> importarDePlanilha(MultipartFile file) throws IOException {
+//        if (file.isEmpty()) {
+//            throw new IllegalArgumentException("Arquivo vazio");
+//        }
+//
+//        if (!isExcelFile(file)) {
+//            throw new IllegalArgumentException("Arquivo deve ser um Excel (.xlsx ou .xls)");
+//        }
+//
+//        List<ProdutoRequestDTO> produtos = new ArrayList<>();
+//
+//        try (Workbook workbook = new XSSFWorkbook(file.getInputStream())) {
+//            Sheet sheet = workbook.getSheetAt(0);
+//
+//            // Pula a primeira linha (cabeçalho)
+//            for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+//                Row row = sheet.getRow(i);
+//
+//                if (row == null || isRowEmpty(row)) {
+//                    continue;
+//                }
+//
+//                ProdutoRequestDTO produto = extrairProdutoDaLinha(row);
+//                if (produto != null) {
+//                    produtos.add(produto);
+//                }
+//            }
+//        }
+//
+//        return produtos;
+//    }
+
+    /**
+     * Importa produtos e os salva no banco de dados
+     *
+>>>>>>> 0dc24ae (hash de senha)
      * @param file arquivo Excel com os produtos
      * @return número de produtos importados e salvos
      * @throws IOException se houver erro ao ler o arquivo
      */
+<<<<<<< HEAD
     public int importarESalvar(MultipartFile file) throws IOException {
         List<ProdutoRequestDTO> produtos = importarDePlanilha(file);
         
@@ -84,10 +138,26 @@ public class ExcelImportService {
         
         return produtos.size();
     }
+=======
+//    public int importarESalvar(MultipartFile file) throws IOException {
+//        List<ProdutoRequestDTO> produtos = importarDePlanilha(file);
+//
+//        for (ProdutoRequestDTO produto : produtos) {
+//            try {
+//                produtoService.salvar(produto);
+//            } catch (Exception e) {
+//                System.err.println("Erro ao salvar produto: " + produto.getNome() + " - " + e.getMessage());
+//            }
+//        }
+//
+//        return produtos.size();
+//    }
+>>>>>>> 0dc24ae (hash de senha)
 
     /**
      * Extrai um produto de uma linha do Excel
      * Esperado formato: Coluna A = Nome, Coluna B = Quantidade, Coluna C = Preço
+<<<<<<< HEAD
      * 
      * @param row linha do Excel
      * @return objeto ProdutoRequestDTO ou null se inválido
@@ -128,10 +198,53 @@ public class ExcelImportService {
             return null;
         }
     }
+=======
+     *
+     * @param row linha do Excel
+     * @return objeto ProdutoRequestDTO ou null se inválido
+     */
+//    private ProdutoRequestDTO extrairProdutoDaLinha(Row row) {
+//        try {
+//            Cell nomeCell = row.getCell(0);
+//            Cell quantidadeCell = row.getCell(1);
+//            Cell precoCell = row.getCell(2);
+//
+//            if (nomeCell == null) {
+//                return null;
+//            }
+//
+//            String nome = getCellStringValue(nomeCell).trim();
+//            if (nome.isEmpty()) {
+//                return null;
+//            }
+//
+//            Integer quantidade = getCellIntValue(quantidadeCell);
+//            if (quantidade == null) {
+//                return null;
+//            }
+//
+//            Double preco = getCellDoubleValue(precoCell);
+//            if (preco == null) {
+//                return null;
+//            }
+//
+//            ProdutoRequestDTO dto = new ProdutoRequestDTO();
+//            dto.setNome(nome);
+//            dto.setQuantidade(quantidade);
+//            dto.setPreco(preco);
+//
+//            return dto;
+//        } catch (Exception e) {
+//            System.err.println("Erro ao processar linha: " + e.getMessage());
+//            return null;
+//        }
+//    }
+>>>>>>> 0dc24ae (hash de senha)
 
     /**
      * Obtém valor de string da célula, independente do tipo
      */
+<<<<<<< HEAD
     private String getCellStringValue(Cell cell) {
         if (cell == null) {
             return "";
@@ -147,10 +260,28 @@ public class ExcelImportService {
         
         return cell.toString();
     }
+=======
+//    private String getCellStringValue(Cell cell) {
+//        if (cell == null) {
+//            return "";
+//        }
+//
+//        if (cell.getCellType() == CellType.STRING) {
+//            return cell.getStringCellValue();
+//        } else if (cell.getCellType() == CellType.NUMERIC) {
+//            return String.valueOf((int) cell.getNumericCellValue());
+//        } else if (cell.getCellType() == CellType.BOOLEAN) {
+//            return String.valueOf(cell.getBooleanCellValue());
+//        }
+//
+//        return cell.toString();
+//    }
+>>>>>>> 0dc24ae (hash de senha)
 
     /**
      * Obtém valor inteiro da célula
      */
+<<<<<<< HEAD
     private Integer getCellIntValue(Cell cell) {
         if (cell == null) {
             return null;
@@ -171,10 +302,33 @@ public class ExcelImportService {
         
         return null;
     }
+=======
+//    private Integer getCellIntValue(Cell cell) {
+//        if (cell == null) {
+//            return null;
+//        }
+//
+//        try {
+//            if (cell.getCellType() == CellType.NUMERIC) {
+//                return (int) cell.getNumericCellValue();
+//            } else if (cell.getCellType() == CellType.STRING) {
+//                String value = cell.getStringCellValue().trim();
+//                if (!value.isEmpty()) {
+//                    return Integer.parseInt(value);
+//                }
+//            }
+//        } catch (NumberFormatException e) {
+//            System.err.println("Erro ao converter para inteiro: " + e.getMessage());
+//        }
+//
+//        return null;
+//    }
+>>>>>>> 0dc24ae (hash de senha)
 
     /**
      * Obtém valor double da célula
      */
+<<<<<<< HEAD
     private Double getCellDoubleValue(Cell cell) {
         if (cell == null) {
             return null;
@@ -195,10 +349,33 @@ public class ExcelImportService {
         
         return null;
     }
+=======
+//    private Double getCellDoubleValue(Cell cell) {
+//        if (cell == null) {
+//            return null;
+//        }
+//
+//        try {
+//            if (cell.getCellType() == CellType.NUMERIC) {
+//                return cell.getNumericCellValue();
+//            } else if (cell.getCellType() == CellType.STRING) {
+//                String value = cell.getStringCellValue().trim();
+//                if (!value.isEmpty()) {
+//                    return Double.parseDouble(value.replace(",", "."));
+//                }
+//            }
+//        } catch (NumberFormatException e) {
+//            System.err.println("Erro ao converter para double: " + e.getMessage());
+//        }
+//
+//        return null;
+//    }
+>>>>>>> 0dc24ae (hash de senha)
 
     /**
      * Verifica se uma linha está vazia
      */
+<<<<<<< HEAD
     private boolean isRowEmpty(Row row) {
         if (row == null) {
             return true;
@@ -220,6 +397,29 @@ public class ExcelImportService {
         
         return true;
     }
+=======
+//    private boolean isRowEmpty(Row row) {
+//        if (row == null) {
+//            return true;
+//        }
+//
+//        for (int i = 0; i < 3; i++) {
+//            Cell cell = row.getCell(i);
+//            if (cell != null) {
+//                if (cell.getCellType() == CellType.BLANK) {
+//                    continue;
+//                }
+//
+//                String value = getCellStringValue(cell).trim();
+//                if (!value.isEmpty()) {
+//                    return false;
+//                }
+//            }
+//        }
+//
+//        return true;
+//    }
+>>>>>>> 0dc24ae (hash de senha)
 
     /**
      * Verifica se o arquivo é um Excel válido
