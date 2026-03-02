@@ -1,52 +1,58 @@
-const form = document.getElementById("loginForm");
+const form = document.getElementById("cadastroForm");
 const mensagem = document.getElementById("mensagem");
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const role = document.getElementById("role").value;
+
+    // ✅ validação simples
+    if (!username || !password) {
+        mensagem.innerText = "Preencha todos os campos";
+        mensagem.style.color = "red";
+        return;
+    }
+
+    if (password.length < 4) {
+        mensagem.innerText = "Senha deve ter no mínimo 4 caracteres";
+        mensagem.style.color = "red";
+        return;
+    }
 
     try {
 
-        const response = await fetch("http://localhost:8080/auth/login", {
+        const response = await fetch("http://localhost:8080/auth/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 username,
-                password
+                password,
+                role
             })
         });
 
-        // ✅ declara UMA vez só
-        let data = null;
-
-        const text = await response.text();
-
-        if (text) {
-            data = JSON.parse(text);
-        }
-
         if (response.ok) {
-
-            mensagem.innerText = "Login realizado com sucesso!";
+            mensagem.innerText = "Usuário cadastrado com sucesso!";
             mensagem.style.color = "green";
 
-            // salva token se existir
-            if (data?.token) {
-                localStorage.setItem("token", data.token);
-            }
+            setTimeout(() => {
+                        window.location.href = "login.html";
+                    }, 1000);
 
+            form.reset();
         } else {
-            mensagem.innerText = data?.message || "Usuário ou senha inválidos";
+            const text = await response.text();
+            mensagem.innerText = text || "Erro ao cadastrar usuário";
             mensagem.style.color = "red";
         }
 
     } catch (error) {
+        console.error(error);
         mensagem.innerText = "Erro ao conectar com servidor";
         mensagem.style.color = "red";
-        console.error(error);
     }
 });

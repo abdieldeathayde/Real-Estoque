@@ -53,7 +53,7 @@ form.addEventListener("submit", async (e) => {
         mensagem.style.color = "green";
 
         setTimeout(() => {
-            window.location.href = "dashboard.html";
+            window.location.href = "index.html";
         }, 1000);
 
     } catch (error) {

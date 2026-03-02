@@ -5,61 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b13273ae-24ce-44cd-bc55-d535a4e5bbf6" name="Changes" comment="alterando hash e login com JWT">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/auth/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/controller/ProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/dto/ProdutoRequestDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/dto/ProdutoResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/AuthenticationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/service/ExcelImportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/service/ExcelImportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/service/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/service/ProdutoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estoque/realcar/service/exception/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/cadastro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/cadastro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cadastro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/ProdutosApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/ProdutosApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/auth/request/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/auth/request/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/auth/request/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/auth/request/RegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/auth/response/LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/auth/response/LoginResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/config/CorsConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/config/CorsConfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/config/CorsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/controller/ProdutoController$ImportacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/controller/ProdutoController$ImportacaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/controller/ProdutoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/controller/ProdutoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/controller/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/controller/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/dto/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/dto/request/ProdutoRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/dto/request/ProdutoRequestDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/dto/response/ProdutoResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/dto/response/ProdutoResponseDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/entities/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/entities/UserRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/mapper/UserMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/mapper/UserMapperImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/repository/ProdutoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/repository/ProdutoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/security/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/security/JwtAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/security/JwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/security/JwtFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/security/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/security/JwtService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/AuthenticationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/ExcelImportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/ExcelImportService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/Produto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/ProdutoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/ProdutoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/estoque/realcar/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/estoque/realcar/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/estoque/realcar/mapper/UserMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
