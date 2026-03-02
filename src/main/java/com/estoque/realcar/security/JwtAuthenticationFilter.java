@@ -1,12 +1,12 @@
 package com.estoque.realcar.security;
 
-<<<<<<< HEAD
+
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-=======
+
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -49,7 +49,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (username != null &&
                 SecurityContextHolder.getContext().getAuthentication() == null) {
 
-<<<<<<< HEAD
+
             var userDetails =
                     userDetailsService.loadUserByUsername(username);
 
@@ -60,9 +60,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                             userDetails.getAuthorities()
                     );
 
-            SecurityContextHolder.getContext()
-                    .setAuthentication(authToken);
-=======
+            SecurityContextHolder.getContext().setAuthentication(authToken);
+
             UserDetails userDetails =
                     userDetailsService.loadUserByUsername(username);
 
@@ -78,13 +77,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext()
                         .setAuthentication(authToken);
             }
->>>>>>> 0dc24ae (hash de senha)
+
         }
 
         filterChain.doFilter(request, response);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 0dc24ae (hash de senha)
+
 }

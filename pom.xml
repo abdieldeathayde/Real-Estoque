@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.estoque.realcar</groupId>
-    <artifactId>realcar</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <properties>
-<<<<<<< HEAD
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-=======
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
->>>>>>> 0dc24ae (hash de senha)
-        <spring.version>3.1.5</spring.version>
-    </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -26,178 +13,136 @@
         <relativePath/>
     </parent>
 
+    <groupId>com.estoque.realcar</groupId>
+    <artifactId>realcar</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>realcar</name>
+    <description>Sistema de Estoque RealCar</description>
+
+    <!-- ================= JAVA ================= -->
+    <properties>
+        <java.version>21</java.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+        <jjwt.version>0.11.5</jjwt.version>
+    </properties>
+
+    <!-- ================= DEPENDENCIES ================= -->
     <dependencies>
-        <!-- Spring Boot Web -->
+
+        <!-- WEB -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-<<<<<<< HEAD
+
+        <!-- SECURITY -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-=======
-
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>5.4.0</version>
->>>>>>> 0dc24ae (hash de senha)
         </dependency>
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 0dc24ae (hash de senha)
-        <!-- Spring Boot Data JPA -->
+        <!-- DATA JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-<<<<<<< HEAD
+
+        <!-- MYSQL -->
         <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>5.2.5</version>
-        </dependency>
-=======
-
-        <!--  MAPSTRUCT  -->
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-            <version>1.6.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-            <version>1.6.3</version>
-            <scope>provided</scope>
-        </dependency>
-
->>>>>>> 0dc24ae (hash de senha)
-
-
-
-
-        <!-- H2 Database -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>2.2.220</version>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-<<<<<<< HEAD
-=======
-        <!-- Spring Security -->
+        <!-- H2 (DEV ONLY) -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- JWT -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
-            <version>0.11.5</version>
+            <version>${jjwt.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
-            <version>0.11.5</version>
+            <version>${jjwt.version}</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
-            <version>0.11.5</version>
+            <version>${jjwt.version}</version>
             <scope>runtime</scope>
         </dependency>
 
-
->>>>>>> 0dc24ae (hash de senha)
-        <!-- Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-<<<<<<< HEAD
-            <optional>true</optional>
-        </dependency>
-
-=======
-            <version>1.18.34</version>
-            <scope>provided</scope>
-        </dependency>
-
-
->>>>>>> 0dc24ae (hash de senha)
-        <!-- Jakarta Validation -->
+        <!-- VALIDATION -->
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
         </dependency>
 
-<<<<<<< HEAD
-        <!-- Apache POI for Excel -->
+        <!-- MAPSTRUCT -->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+
+        <!-- LOMBOK -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- EXCEL (POI) -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>5.2.3</version>
+            <version>5.2.5</version>
         </dependency>
 
-        <!-- Testing -->
+        <!-- TEST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-=======
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>9.3.0</version>
-            <scope>runtime</scope>
-        </dependency>
 
-
->>>>>>> 0dc24ae (hash de senha)
     </dependencies>
 
+    <!-- ================= BUILD ================= -->
     <build>
         <plugins>
+
+            <!-- SPRING BOOT -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
+
+            <!-- COMPILER -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-<<<<<<< HEAD
-                    <source>25</source>
-                    <target>25</target>
-=======
-                    <source>21</source>
-                    <target>21</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
 
                     <annotationProcessorPaths>
+
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
-                            <version>1.6.3</version>
+                            <version>${mapstruct.version}</version>
                         </path>
 
                         <path>
@@ -205,10 +150,11 @@
                             <artifactId>lombok</artifactId>
                             <version>1.18.34</version>
                         </path>
+
                     </annotationProcessorPaths>
->>>>>>> 0dc24ae (hash de senha)
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

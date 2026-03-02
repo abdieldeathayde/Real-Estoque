@@ -26,13 +26,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-<<<<<<< HEAD
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-=======
+
 import java.util.List;
->>>>>>> 0dc24ae (hash de senha)
+
 
 @CrossOrigin("*")
 @RestController
@@ -40,7 +40,7 @@ import java.util.List;
 public class ProdutoController {
 
     private final ProdutoService produtoService;
-<<<<<<< HEAD
+
     private final ExcelImportService excelImportService;
 
     @Autowired
@@ -49,7 +49,6 @@ public class ProdutoController {
         this.excelImportService = excelImportService;
     }
 
-=======
 //    private final ExcelImportService excelImportService;
 
     @Autowired
@@ -59,7 +58,7 @@ public class ProdutoController {
     }
 
 
->>>>>>> 0dc24ae (hash de senha)
+
      @CrossOrigin(origins = "*")
      @RestController
      public class ImportacaoController {
@@ -76,13 +75,13 @@ public class ProdutoController {
      public ResponseEntity<String> importar(@RequestParam("file") MultipartFile file) {
          try {
              // Ler o arquivo com Apache POI
-<<<<<<< HEAD
+
              Workbook workbook = new XSSFWorkbook(file.getInputStream());
              Sheet sheet = workbook.getSheetAt(0);
-=======
+
 //             Workbook workbook = new XSSFWorkbook(file.getInputStream());
 //             Sheet sheet = workbook.getSheetAt(0);
->>>>>>> 0dc24ae (hash de senha)
+
              // processar dados...
              return ResponseEntity.ok("Importação concluída!");
          } catch (Exception e) {
@@ -130,7 +129,7 @@ public class ProdutoController {
      * Importa produtos de um arquivo Excel
      * O arquivo deve conter as colunas: Nome, Quantidade, Preço
      */
-<<<<<<< HEAD
+
     @PostMapping("/importar/visualizar")
     public ResponseEntity<?> visualizarImportacao(@RequestParam("file") MultipartFile file) {
         try {
@@ -148,7 +147,7 @@ public class ProdutoController {
                     .body(Map.of("erro", e.getMessage()));
         }
     }
-=======
+
 //    @PostMapping("/importar/visualizar")
 //    public ResponseEntity<?> visualizarImportacao(@RequestParam("file") MultipartFile file) {
 //        try {
@@ -172,7 +171,7 @@ public class ProdutoController {
      * Importa e salva produtos de um arquivo Excel
      * O arquivo deve conter as colunas: Nome, Quantidade, Preço
      */
-<<<<<<< HEAD
+
     @PostMapping("/importar")
     public ResponseEntity<?> importarDePlanilha(@RequestParam("file") MultipartFile file) {
         try {
@@ -197,7 +196,6 @@ public class ProdutoController {
                     ));
         }
     }
-=======
 //    @PostMapping("/importar")
 //    public ResponseEntity<?> importarDePlanilha(@RequestParam("file") MultipartFile file) {
 //        try {
@@ -222,6 +220,6 @@ public class ProdutoController {
 //                    ));
 //        }
 //    }
->>>>>>> 0dc24ae (hash de senha)
+
 }
 

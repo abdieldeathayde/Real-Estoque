@@ -1,6 +1,6 @@
 package com.estoque.realcar.service;
 
-<<<<<<< HEAD
+
 import com.estoque.realcar.dto.ProdutoRequestDTO;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -8,23 +8,21 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-=======
+
 //import org.apache.poi.ss.usermodel.Cell;
 //import org.apache.poi.ss.usermodel.CellType;
 //import org.apache.poi.ss.usermodel.Row;
 //import org.apache.poi.ss.usermodel.Sheet;
 //import org.apache.poi.ss.usermodel.Workbook;
->>>>>>> 0dc24ae (hash de senha)
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-<<<<<<< HEAD
+
 import java.util.ArrayList;
 import java.util.List;
-=======
->>>>>>> 0dc24ae (hash de senha)
+
 
 @Service
 public class ExcelImportService {
@@ -38,16 +36,14 @@ public class ExcelImportService {
 
     /**
      * Importa produtos de um arquivo Excel
-<<<<<<< HEAD
-     * 
-=======
-     *
->>>>>>> 0dc24ae (hash de senha)
+
+     **
+0dc24ae (hash de senha)
      * @param file arquivo Excel com os produtos
      * @return lista de produtos importados
      * @throws IOException se houver erro ao ler o arquivo
      */
-<<<<<<< HEAD
+
     public List<ProdutoRequestDTO> importarDePlanilha(MultipartFile file) throws IOException {
         if (file.isEmpty()) {
             throw new IllegalArgumentException("Arquivo vazio");
@@ -124,7 +120,6 @@ public class ExcelImportService {
      * @return número de produtos importados e salvos
      * @throws IOException se houver erro ao ler o arquivo
      */
-<<<<<<< HEAD
     public int importarESalvar(MultipartFile file) throws IOException {
         List<ProdutoRequestDTO> produtos = importarDePlanilha(file);
         
@@ -138,7 +133,7 @@ public class ExcelImportService {
         
         return produtos.size();
     }
-=======
+
 //    public int importarESalvar(MultipartFile file) throws IOException {
 //        List<ProdutoRequestDTO> produtos = importarDePlanilha(file);
 //
@@ -152,7 +147,7 @@ public class ExcelImportService {
 //
 //        return produtos.size();
 //    }
->>>>>>> 0dc24ae (hash de senha)
+
 
     /**
      * Extrai um produto de uma linha do Excel
@@ -198,11 +193,8 @@ public class ExcelImportService {
             return null;
         }
     }
-=======
-     *
-     * @param row linha do Excel
-     * @return objeto ProdutoRequestDTO ou null se inválido
-     */
+
+
 //    private ProdutoRequestDTO extrairProdutoDaLinha(Row row) {
 //        try {
 //            Cell nomeCell = row.getCell(0);
@@ -239,12 +231,12 @@ public class ExcelImportService {
 //            return null;
 //        }
 //    }
->>>>>>> 0dc24ae (hash de senha)
+
 
     /**
      * Obtém valor de string da célula, independente do tipo
      */
-<<<<<<< HEAD
+
     private String getCellStringValue(Cell cell) {
         if (cell == null) {
             return "";
@@ -260,7 +252,7 @@ public class ExcelImportService {
         
         return cell.toString();
     }
-=======
+
 //    private String getCellStringValue(Cell cell) {
 //        if (cell == null) {
 //            return "";
@@ -276,12 +268,12 @@ public class ExcelImportService {
 //
 //        return cell.toString();
 //    }
->>>>>>> 0dc24ae (hash de senha)
+
 
     /**
      * Obtém valor inteiro da célula
      */
-<<<<<<< HEAD
+
     private Integer getCellIntValue(Cell cell) {
         if (cell == null) {
             return null;
@@ -302,7 +294,7 @@ public class ExcelImportService {
         
         return null;
     }
-=======
+
 //    private Integer getCellIntValue(Cell cell) {
 //        if (cell == null) {
 //            return null;
@@ -323,12 +315,12 @@ public class ExcelImportService {
 //
 //        return null;
 //    }
->>>>>>> 0dc24ae (hash de senha)
+
 
     /**
      * Obtém valor double da célula
      */
-<<<<<<< HEAD
+
     private Double getCellDoubleValue(Cell cell) {
         if (cell == null) {
             return null;
@@ -349,7 +341,7 @@ public class ExcelImportService {
         
         return null;
     }
-=======
+
 //    private Double getCellDoubleValue(Cell cell) {
 //        if (cell == null) {
 //            return null;
@@ -370,12 +362,12 @@ public class ExcelImportService {
 //
 //        return null;
 //    }
->>>>>>> 0dc24ae (hash de senha)
+
 
     /**
      * Verifica se uma linha está vazia
      */
-<<<<<<< HEAD
+
     private boolean isRowEmpty(Row row) {
         if (row == null) {
             return true;
@@ -397,7 +389,7 @@ public class ExcelImportService {
         
         return true;
     }
-=======
+
 //    private boolean isRowEmpty(Row row) {
 //        if (row == null) {
 //            return true;
@@ -419,7 +411,7 @@ public class ExcelImportService {
 //
 //        return true;
 //    }
->>>>>>> 0dc24ae (hash de senha)
+
 
     /**
      * Verifica se o arquivo é um Excel válido
