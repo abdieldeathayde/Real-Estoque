@@ -15,43 +15,19 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthenticationService {
 
-    private final AuthenticationManager authManager;
+    private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
     private final UserDetailsService userDetailsService;
-    private final AuthenticationManager authenticationManager;
-    private final UserRepository userRepository;
-
-
 
     public String login(String username, String password) {
 
-        // ✅ valida usuário e senha
         authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        username,
-                        password
-                )
+                new UsernamePasswordAuthenticationToken(username, password)
         );
 
-        // ✅ busca usuário
-        UserDetails user = userDetailsService.loadUserByUsername(username);
+        UserDetails userDetails =
+                userDetailsService.loadUserByUsername(username);
 
-
-        // ✅ gera token
-        return jwtService.generateToken(user);
-    }
-
-    public void loadUserByUsername(String username)
-            throws UsernameNotFoundException {
-
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() ->
-                        new UsernameNotFoundException("Usuário não encontrado"));
-
-        org.springframework.security.core.userdetails.User
-                .builder()
-                .username(user.getUsername())
-                .password(user.getPassword())
-                .build();
+        return jwtService.generateToken(userDetails);
     }
 }

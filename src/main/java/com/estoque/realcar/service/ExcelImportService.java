@@ -1,7 +1,7 @@
 package com.estoque.realcar.service;
 
 
-import com.estoque.realcar.dto.ProdutoRequestDTO;
+import com.estoque.realcar.dto.request.ProdutoRequestDTO;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
